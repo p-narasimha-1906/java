@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<h3 class="pb-3 pt-3">Reports Applications</h3>
-		<form:form action="search" modelAttribute="req" method="POST">
+		<form:form action="search" modelAttribute="search" method="POST">
 			<table>
 				<tr>
 					<td>PlanName:</td>
@@ -47,8 +47,10 @@
 					<td class="pd-3 pt-3"><form:input type="date" path="endDate" /></td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="Search"
-						class="btn btn-primary" /></td>
+					<td class="pd-3 pt-3"><a href="/" class="btn btn-primary">Reset</a>
+					<input type="submit" value="Search" class="btn btn-secondary"/>
+					</td>
+						
 				</tr>
 			</table>
 		</form:form>
@@ -85,10 +87,14 @@
 						<td>${plan.terminatedReason}</td>
 					</tr>
 				</c:forEach>
+				<tr>
+				<c:if test="${ empty plans}">
+				<td colspan="11" style="text-align:center">No Records Found</td>
+				</c:if>
+				</tr>
 			</tbody>
 		</table>
-		<hr />
-		Export:<a href="">Excel</a> <a href="">Pdf</a>
+		Export:<a href="excel">Excel</a> <a href="pdf">Pdf</a>
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
