@@ -26,7 +26,7 @@ public class EmailSender {
 			helper.addAttachment("Plans-Info", f);
 			mailSender.send(mimeMessage);
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 
 		return true;

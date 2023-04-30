@@ -47,6 +47,7 @@ public class ReportController {
 	
 	@GetMapping("/")
 	public String getSeach(Model model) {
+		
 		model.addAttribute("search",new SearchRequest());
 		init(model);
 		return "index";
