@@ -1,0 +1,10 @@
+datasource: ''
+ddl-auto: update
+driver-class-name: com.mysql.cj.jdbc.Driver
+hibernate: ''
+jpa: ''
+password: root
+show-sql: '''true'''
+spring: ''
+url: jdbc:mysql://localhost:3306/miniproject3
+username: root

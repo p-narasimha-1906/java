@@ -1,0 +1,10 @@
+package com.ashokit.service;
+
+import com.ashokit.binding.LoginRequestModel;
+import com.ashokit.binding.SignUpRequestModel;
+
+public interface UserServices {
+	
+	public String login(LoginRequestModel loginRequest);
+	public String signUp(SignUpRequestModel signUpRequest);
+}

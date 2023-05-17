@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;dashboard.html&apos; to &apos;templates&apos;&#x0D;&#x0A;- Original project: &apos;08_SBMS_Blog_App&apos;&#x0D;&#x0A;- Destination element: &apos;templates&apos;&#x0D;&#x0A;- Original element: &apos;dashboard.html&apos;" description="Copy file" element1="src/main/resources/templates/dashboard.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1683788833455" target="/10_SBMS_Blog_Application/src/main/resources/templates" units="0" version="1.0"/>
+</session>

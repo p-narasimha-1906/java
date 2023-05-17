@@ -1,0 +1,13 @@
+package com.parthu.constent;
+
+public class AppConstent {
+	public static final String SUCCE_MSG="successMsg";
+	public static final String ERR_MSG="errorMsg";
+
+	public static final String UNLOCK="unlock";
+	public static final String SIGNUP_USER="user";
+	public static final String LOGIN="login";
+	public static final String SIGNUP_SUCC_MSG="Account created, Check your email";
+
+	public static final String SIGNUP_ERR_MSG="Choose Unique Email";
+}

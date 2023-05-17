@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.parthu.resst.UserrestController&apos; to &apos;UserController&apos;&#x0D;&#x0A;- Original project: &apos;05_Ajax_App&apos;&#x0D;&#x0A;- Original element: &apos;com.parthu.resst.UserrestController&apos;&#x0D;&#x0A;- Renamed element: &apos;com.parthu.resst.UserController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UserrestController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.parthu.resst{UserrestController.java[UserrestController" matchStrategy="1" name="UserController" qualified="false" references="true" similarDeclarations="false" stamp="1682527024938" textual="false" version="1.0"/>
+</session>

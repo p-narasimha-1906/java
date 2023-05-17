@@ -1,0 +1,103 @@
+package com.parthu.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.parthu.binding.LogInForm;
+import com.parthu.binding.SignUpForm;
+import com.parthu.binding.UnlockForm;
+import com.parthu.constent.AppConstent;
+import com.parthu.service.UserService;
+
+@Controller
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+
+	@PostMapping("/signup")
+	public String HandleSignup(@ModelAttribute(AppConstent.SIGNUP_USER) SignUpForm form, Model model) {
+		boolean status = userService.signUp(form);
+		if (status) {
+			model.addAttribute(AppConstent.SUCCE_MSG, "Account created, Check your email");
+		} else {
+			model.addAttribute(, "Choose Unique Email");
+		}
+		return "signup";
+	}
+
+	@GetMapping("/signup")
+	public String signupPage(Model model) {
+		model.addAttribute(AppConstent.SIGNUP_USER, new SignUpForm());
+		return "signup";
+	}AppConstent.ERR_MSG
+
+	@GetMapping("/login")
+	public String loginPage(Model model) {
+		model.addAttribute(AppConstent.LOGIN, new LogInForm());
+		return "login";
+	}
+
+	@PostMapping("/login")
+	public String loginAccount(@ModelAttribute(AppConstent.LOGIN) LogInForm form, Model model) {
+		// System.out.println(form);
+		String status = userService.logIn(form);
+
+		if (status.contains("success")) {
+			return "redirect:/dashBoard";
+		}
+		model.addAttribute(AppConstent.ERR_MSG, status);
+		return "login";
+	}
+
+	@GetMapping("/unlock")
+	public String unlockPage(@RequestParam String email, Model model) {
+		UnlockForm unlockFormObj = new UnlockForm();
+		unlockFormObj.setEmail(email);
+		model.addAttribute(AppConstent.UNLOCK, unlockFormObj);
+		return "unlock";
+	}
+
+	@PostMapping("/unlock")
+	public String ulockUserAccount(@ModelAttribute(AppConstent.UNLOCK) UnlockForm unlock, Model model) {
+
+		if (unlock.getNewPwd().equals(unlock.getConfirmPwd())) {
+			boolean status = userService.unLock(unlock);
+
+			if (status) {
+				model.addAttribute(AppConstent.SUCCE_MSG, "Your account unlocked successfully");
+			} else {
+				model.addAttribute(AppConstent.ERR_MSG, "Given temporary pwd is incorrect, Check your email ");
+			}
+		} else {
+			model.addAttribute(AppConstent.ERR_MSG, "New pwd and Confirm pwd should be same");
+		}
+		return "unlock";
+	}
+
+	@GetMapping("/forgotPwd")
+	public String forgotPwdPage() {
+
+		return "forgotPwd";
+	}
+
+	@PostMapping("/forgot")
+	public String forgotPwd(@RequestParam("email") String email, Model model) {
+		System.out.println(email);
+		boolean status = userService.forgotPwd(email);
+		if (status) {
+			model.addAttribute(AppConstent.SUCCE_MSG, "Password sent to your email");
+
+		} else {
+			model.addAttribute(AppConstent.ERR_MSG, "Invalid Email");
+
+		}
+		return "forgotPwd";
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.parthu.constent;
+
+public class AppConstent {
+	public static final String SUCCE_MSG = "successMsg";
+	public static final String ERR_MSG = "errorMsg";
+	public static final String UNLOCK = "unlock";
+	public static final String SIGNUP_USER = "user";
+	public static final String LOGIN = "login";
+	public static final String SIGNUP_SUCC_MSG = "Account created, Check your email";
+	public static final String SIGNUP_ERR_MSG = "Choose Unique Email";
+	public static final String UNLOCK_SUCC_MSG = "Your account unlocked successfully";
+	public static final String UNLOCK_ERR_MSG = "Given temporary pwd is incorrect, Check your email ";
+	public static final String UNLOCK_WAR_MSG = "New pwd and Confirm pwd should be same";
+	public static final String FORGOT_SUCC_MSG = "Password sent to your email";
+	public static final String FORGOT_ERR_MSG = "Invalid Email";
+	public static final String COURSE_NAMES="coursesNames";
+	public static final String STSTUS_NAMES="statusesNames";
+	public static final String FORM_OBJ="formObj";
+	public static final String ENQ_SUCC= "Enquiry Added";
+	public static final String ENQ_ERR= "Problem Occured";
+	public static final String REL_USER_ID= "userId";
+	public static final String DASHB_URL= "Problem Occured";
+	public static final String SEARCH_URL="searchForm";
+	public static final String ENQ_URL="enquiries";
+	public static final String EDIT_URL="enquiries";
+	
+	
+	
+
+}

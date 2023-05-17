@@ -1,0 +1,18 @@
+package com.parthu.constent;
+
+public class AppConstent {
+	public static final String SUCCE_MSG="successMsg";
+	public static final String ERR_MSG="errorMsg";
+
+	public static final String UNLOCK="unlock";
+	public static final String SIGNUP_USER="user";
+	public static final String LOGIN="login";
+	public static final String SIGNUP_SUCC_MSG="Account created, Check your email";
+
+	public static final String SIGNUP_ERR_MSG="Choose Unique Email";
+	
+	public static final String UNLOCK_SUCC_MSG="Your account unlocked successfully";
+	public static final String UNLOCK_ERR_MSG="Given temporary pwd is incorrect, Check your email ";
+	public static final String UNLOCK_WAR_MSG="New pwd and Confirm pwd should be same";
+	public static final String FORGOT_SUCC_MSG="Password sent to your email";
+}

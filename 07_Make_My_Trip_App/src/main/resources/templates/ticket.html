@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Get Ticket Here</h3>
+	<form th:action="@{/ticket}">
+		<table>
+			<tr>
+				<td>Ticket Number</td>
+				<td><input type="number" name="*{ticketNum}" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Get Ticket" /></td>
+			</tr>
+		</table>
+	</form>
+	<table>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.ticketNum}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.ticketCost}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.name}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.cost}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.from}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.to}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.doj}"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td th:text="${teckets.status}"></td>
+		</tr>
+
+	</table>
+</body>
+</html>

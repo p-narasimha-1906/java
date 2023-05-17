@@ -1,0 +1,68 @@
+package com.parthu.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ashokit.binding.AddBlogRequestModel;
+import com.ashokit.binding.CommentRequestAndResp;
+import com.parthu.binding.BlogsDataResp;
+import com.parthu.entity.CommentEntity;
+import com.parthu.entity.PostEntity;
+import com.parthu.entity.UserEntity;
+import com.parthu.repo.CommentRepo;
+import com.parthu.repo.PostRepo;
+import com.parthu.repo.UserRepo;
+import com.parthu.util.AppUtils;
+
+@Service
+public class BlogsServicesImpl implements BlogsServices {
+
+	@Autowired
+	private PostRepo postRepo;
+
+	@Autowired
+	private UserRepo userRepo;
+
+	@Autowired
+	private HttpSession httpSession;
+	
+	@Autowired
+	private CommentRepo commentRepo;
+
+	@Override
+	public String deleteBlog(Integer blogId) {
+		Optional<PostEntity> postData = postRepo.findById(blogId);
+		PostEntity postEntity = null;
+		if(postData.isPresent()) {
+			postEntity = postData.get();
+		}
+		postEntity.setDeleted(true);
+		postRepo.save(postEntity);
+		return "DELETED";
+	}
+
+	@Override
+	public List<BlogsDataResp> getAllBlogs() {
+		List<BlogsDataResp> blogsDataResps = new ArrayList<>();
+		postRepo.findByDeletedIsFalse().iterator().forEachRemaining(allBlogsData -> {
+			BlogsDataResp data = new BlogsDataResp();
+			data.setBlogId(allBlogsData.getPost_id());
+			data.setContent(allBlogsData.getContent());
+			data.setTitle(allBlogsData.getTitle());
+			data.setShortDescription(allBlogsData.getDescription());
+			data.setCreatedOn(allBlogsData.getCreatedOn().toString());
+			blogsDataResps.add(data);
+		});
+
+		return blogsDataResps;
+	}
+
+
+}
+
