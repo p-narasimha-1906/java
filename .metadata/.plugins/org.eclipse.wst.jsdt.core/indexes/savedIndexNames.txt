@@ -1,3 +1,1 @@
-INDEX VERSION 1.4+D:\parthuworkspace\sbmsworkspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3476429544.index
-3526345683.index
+INDEX VERSION 1.4+D:\parthuworkspace\narasimha_sptingboot\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes

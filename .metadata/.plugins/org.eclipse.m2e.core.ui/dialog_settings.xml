@@ -69,6 +69,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\parthuworkspace\narasimha_sptingboot\SpringBoot_Security_JWT"/>
+			<item value="D:\parthuworkspace\narasimha_sptingboot\springboot_circuit_breaker"/>
 			<item value="C:\Users\CSC\Downloads\SB-MiniProject_3\SB_MiniProject_3"/>
 			<item value="D:\parthuworkspace\springbootworkspace\06_Rest_Phone_App"/>
 			<item value="D:\parthuworkspace\sbmsworkspace\001_Rreport_App"/>
