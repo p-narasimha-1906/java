@@ -1,6 +1,0 @@
-package com.parthu.constent;
-
-public class AppConstent {
-	public static final String SUCCE_MSG="successMsg";
-
-}

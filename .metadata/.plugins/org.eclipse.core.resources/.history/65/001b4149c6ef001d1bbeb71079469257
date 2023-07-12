@@ -1,7 +1,0 @@
-package com.parthu.service;
-
-public interface UserServices {
-	
-	public String login(LoginRequestModel loginRequest);
-	public String signUp(SignUpRequestModel signUpRequest);
-}
