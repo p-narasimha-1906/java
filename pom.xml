@@ -73,6 +73,18 @@
 	<build>
 		<plugins>
 			<plugin>
+      			<groupId>org.sonarsource.scanner.maven</groupId>
+      			<artifactId>sonar-maven-plugin</artifactId>
+      			<version>3.4.0.905</version>
+      			<dependencies>
+        <dependency>
+          <groupId>org.codehaus.plexus</groupId>
+          <artifactId>plexus-classworlds</artifactId>
+          <version>2.5.2</version>
+        </dependency>
+      </dependencies>
+    		</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
