@@ -1,0 +1,46 @@
+package in.exception;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class hello implements Cloneable {
+	int id;
+	int age;
+	hello(int id,int age)
+	{
+		this.id=id;
+		this.age=age;
+	}
+	
+	@Override
+	public String toString() {
+		return "hello [id=" + id + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) throws Exception {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("enter string");
+//		String s=sc.();
+	
+		hello h=new hello(1,12);
+		h.id=13;
+		hello h1=(hello)h.clone();
+		h1.id=12;
+		h.id=13;
+		
+		
+		hello h2=(hello)h.clone();
+		h2.id=90;
+		Class c= h2.getClass();
+		System.out.println(c.cast(c));
+//		hello h3=h2.n
+
+		
+		
+		System.out.println("h clone:  "+h);
+		System.out.println("o1 clone:  "+h1);
+		System.out.println("h2 clone:  "+h2);
+	}
+
+}

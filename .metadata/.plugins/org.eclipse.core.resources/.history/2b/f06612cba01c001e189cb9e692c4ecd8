@@ -1,0 +1,26 @@
+package in.exception;
+
+
+import java.util.Scanner;
+
+
+public class hello {
+	
+	
+	public static void main(String[] args) {
+		int[] a= {1,9,2,7,4};
+		System.out.println(Math.sqrt(16));
+		
+	int a1=Integer.MAX_VALUE;
+	
+	
+	
+	
+	
+	
+	}
+	
+		
+	
+}
+

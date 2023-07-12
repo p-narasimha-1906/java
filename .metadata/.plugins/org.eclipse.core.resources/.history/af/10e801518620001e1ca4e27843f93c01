@@ -1,0 +1,51 @@
+package in.inheritence;
+
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+interface employee1
+{
+	default void m1()
+	{
+		System.out.println("from employee1");
+	}
+}
+interface employee2
+{
+	default void m1()
+	{
+		System.out.println("from employee2");
+	}
+}
+
+public class multiple{
+	public static void main(String[] args) {
+		HashMap<Integer, String> h=new HashMap();	
+		h.put(1, "first");
+		h.put(11, "first");
+		h.put(2, "second");
+		h.put(0, "zero");
+		h.put(10, "ten");
+		h.put(9, "nine");
+		h.put(111, "first");
+		h.put(21, "second");
+		h.put(90, "zero");
+		h.put(100, "ten");
+		h.put(94, "nine");
+		h.put(86, "first");
+		h.put(82, "first");
+		for(Integer i:h.keySet())
+		{
+			System.out.println(i+ " : "+h.get(i));
+		}
+		
+		
+		
+		
+}
+}

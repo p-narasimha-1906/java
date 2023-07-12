@@ -1,0 +1,42 @@
+package in.exception;
+
+
+import java.util.Scanner;
+
+
+public class hello{
+	int id;
+	int age;
+	private hello(int id,int age)
+	{
+		this.id=id;
+		this.age=age;
+		System.out.println("constructor excution");
+	}
+	
+	@Override
+	public String toString() {
+		return "hello [id=" + id + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) throws Exception {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("enter string");
+	hello o=new hello(1,12);
+	System.out.println(o);
+	narasimha n= new narasimha(1,2);
+	
+		
+	}
+}
+class narasimha
+{
+int id;
+int age;
+narasimha(int id,int age)
+{
+	this.id=id;
+	this.age=age;
+}
+}
+

@@ -1,0 +1,31 @@
+package in.exception;
+
+
+import java.util.Scanner;
+
+
+public class hello extends narasimha{
+	
+	
+	@Override
+	public String toString() {
+		return "hello [id=" + id + ", age=" + age + "]";
+	}
+
+	public static void main(String[] args) throws Exception {
+
+	
+		
+	}
+}
+class narasimha
+{
+int id;
+int age;
+narasimha(int id,int age)
+{
+	this.id=id;
+	this.age=age;
+}
+}
+
